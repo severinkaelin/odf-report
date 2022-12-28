@@ -15,7 +15,7 @@ class Report
     @sections = []
 
     @tmp_dir = File.join(Dir.tmpdir, random_filename(:prefix=>'odt_'))
-    Dir.mkdir(@tmp_dir) unless File.exists? @tmp_dir
+    Dir.mkdir(@tmp_dir) unless File.exist? @tmp_dir
 
     yield(self)
 

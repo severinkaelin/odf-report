@@ -23,7 +23,7 @@ module ODFReport
         filename = ''
         opts[:length].times { filename << opts[:chars][rand(opts[:chars].size)] }
         filename = opts[:prefix] + filename + opts[:suffix]
-        return filename unless opts[:verify] && File.exists?(filename)
+        return filename unless opts[:verify] && File.exist?(filename)
       end
       nil
     end
